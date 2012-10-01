@@ -4,8 +4,16 @@
 
 <div class="page-header">
   <h1> {{ gen.name }}
-  <small>{{ gen }}</small>
+  <small>{{ gen }} has <span class="badge">{{ gen.points }}</span> points</small>
   </h1>
 </div>
+
+{% if gen.notes %}
+{% autoescape on %}
+	<div class="well"
+    <p>{{ gen.notes }}</p>
+    </div>
+{% endautoescape %}
+{% endif %}
 
 {% endblock body %}

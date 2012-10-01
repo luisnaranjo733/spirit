@@ -1,0 +1,13 @@
+1. Spirit Pictures
+
+would require user authentication.
+Maybe sync DB with school LDAP server?
+students would be able to upload pictures
+should staff rank them or should other students rank them?
+points for uploading
+
+2. Admin only form for adding attendees of special events.
+
+3. Add points for every student that signs up
+
+4. Teachers and ASB should be able to write notes about a certain class

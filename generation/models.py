@@ -3,6 +3,7 @@ from django.db import models
 class Generation(models.Model):
     graduation = models.CharField(max_length=4, primary_key=True) # 2013
     points = models.IntegerField(blank=True, null=True)
+    notes = models.TextField(blank=True)
 
     def __unicode__(self):
         return 'Class of %s' % self.graduation
