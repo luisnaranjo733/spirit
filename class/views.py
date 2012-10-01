@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, render_to_response
 
+
 def home(request):
     return render(request, 'index.html')
 
@@ -8,13 +9,15 @@ def home(request):
 def freshmen(request):
     return HttpResponse('frosh')
 
-def sophomore(request):
+
+def sophomores(request):
     return HttpResponse('soph')
 
-def junior(request):
+
+def juniors(request):
     return HttpResponse('jr')
 
-def senior(request):
-    return HttpResponse('sr')
 
+def seniors(request):
+    return HttpResponse('sr')
 
