@@ -7,6 +7,14 @@ class Generation(models.Model):
     def __unicode__(self):
         return 'Class of %s' % self.graduation
 
+    def Points(self):
+        if not self.points:
+            self.points = 0
+            self.save()
+            return 0
+        else:
+            return self.points
+
 
 class Student(models.Model):
     firstName = models.CharField(max_length=80)

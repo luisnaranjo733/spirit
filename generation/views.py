@@ -36,6 +36,11 @@ def getGen(genName):
     generation.name = genName
     return generation
 
+FRESHMEN = getGen('freshmen')
+SOPHOMORES = getGen('sophomores')
+JUNIORS = getGen('juniors')
+SENIORS = getGen('seniors')
+
 
 def getAll():
     for generation in Generation.objects.all():
@@ -50,7 +55,8 @@ def home(request):
         if generation.graduation not in current_years:
             highest.remove(generation)
 
-    params = {'winner': highest[0]}
+    params = {'winner': highest[0], 'seniors': SENIORS, 'juniors': JUNIORS,
+            'sophomores': SOPHOMORES, 'freshmen': FRESHMEN}
     return render(request, 'index.html', params)
 
 
