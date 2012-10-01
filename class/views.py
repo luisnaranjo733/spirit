@@ -7,17 +7,17 @@ def home(request):
 
 
 def freshmen(request):
-    return HttpResponse('frosh')
+    return render(request, 'class/freshmen.html')
 
 
 def sophomores(request):
-    return HttpResponse('soph')
+    return render(request, 'class/sophomores.html')
 
 
 def juniors(request):
-    return HttpResponse('jr')
+    return render(request, 'class/juniors.html')
 
 
 def seniors(request):
-    return HttpResponse('sr')
+    return render(request, 'class/seniors.html')
 
